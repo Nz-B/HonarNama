@@ -21,11 +21,11 @@ This is a Wordpress theme boilerplate. The following features are already includ
 ## **Install**
 
 1. Clone the theme into `wp-content/themes/` 🖥️
-2. Ensure you have npm installed. Inside the theme directory (`hodcode`), run:
+2. Ensure you have npm installed. Inside the theme directory (`HonarNama`), run:
    ```bash
    npm install
    ```
-3. From WordPress admin themes, activate the `hodcode` theme. ✅
+3. From WordPress admin themes, activate the `HonarNama` theme. ✅
 
 ---
 
