@@ -1,27 +1,107 @@
 body {
-    direction: rtl;
-   font-family: 'Yekan';
-   position: relative;
+    direction: rtl; /* جهت نوشتار از راست به چپ */
+    font-family: 'Yekan'; /* فونت فارسی یکن */
+    position: relative;
 }
 
-.menu{
-    display: flex;
-    gap: 30px;
+header {
+    position: fixed; /* هدر ثابت می‌ماند */
+    background-color: rgb(240 232 232 / 70%); /* رنگ پس‌زمینه با شفافیت */
+    backdrop-filter: blur(5px); /* افکت محو برای پس‌زمینه */
+    z-index: 10; /* اولویت لایه برای هدر */
+    width: 100%; /* عرض 100 درصد */
 }
-header{
-    position: fixed;
-    background-color: rgb(240 232 232 / 70%);
-    backdrop-filter:blur(5px);
-    z-index: 10px;
+
+/* استایل برای منوی ناوبری */
+.menu {
+    display: flex; /* نمایش آیتم‌ها به صورت افقی */
+    justify-content: flex-end; /* قرار گرفتن آیتم‌ها در سمت راست */
+    padding: 0;
+    margin: 0;
+    gap: 0; /* فاصله بین آیتم‌ها */
 }
-.login{
-    background: #762F79;
-    color: white;
-    padding: 10px;
-    height: 45px;
-    border-radius: 10px;
-    font-size: 13px;
-    position: absolute;
-    left: 10px;
-    margin-top: 8px;
+
+/* استایل برای هر آیتم منو */
+.menu li {
+    list-style: none; /* حذف نقطه لیست */
+}
+
+/* استایل لینک‌های منو */
+.menu-item {
+    text-decoration: none; /* حذف خط زیر لینک‌ها */
+    font-size: 16px; /* اندازه فونت */
+    color: #333; /* رنگ متن */
+    padding: 15px; /* فضای داخلی آیتم‌ها */
+    border-bottom: 2px solid transparent; /* خط زیر لینک‌ها (غیرفعال) */
+    transition: border-color 0.3s ease, color 0.3s ease; /* انیمیشن برای تغییر رنگ */
+}
+
+/* افکت زمانی که روی آیتم منو هاور می‌شود */
+.menu-item:hover {
+    border-bottom: 2px solid #762F79; /* تغییر رنگ خط زیر لینک */
+    color: #762F79; /* تغییر رنگ متن */
+}
+
+/* استایل برای دکمه ورود/ثبت‌نام */
+.login {
+    background: #762F79; /* رنگ پس‌زمینه */
+    color: white; /* رنگ متن */
+    padding: 10px; /* فضای داخلی */
+    height: 45px; /* ارتفاع دکمه */
+    border-radius: 10px; /* گوشه‌های گرد */
+    font-size: 13px; /* اندازه فونت */
+    position: relative;
+}
+
+/* استایل برای لوگو */
+.custom-logo {
+    width: 55px; /* عرض لوگو */
+    // margin-top: 5px; /* فاصله از بالا */
+    display: inline-block; /* نمایش به صورت بلوک در خط */
+}
+
+/* استایل آیکون‌ها */
+.icons {
+    width: 30px; /* عرض آیکون */
+    height: 30px; /* ارتفاع آیکون */
+    margin: 0 10px; /* فاصله از اطراف */
+}
+
+/* کانتینر دکمه‌های آیکون‌ها */
+.actions {
+    display: flex; /* نمایش به صورت افقی */
+    align-items: center; /* تنظیم عمودی دکمه‌ها */
+    gap: 10px; /* فاصله بین دکمه‌ها */
+}
+
+/* تنظیمات برای صفحات موبایل و تبلت (رسپانسیو) */
+@media (max-width: 768px) {
+    /* تغییر استایل هدر برای صفحات کوچک‌تر */
+    header {
+        flex-direction: column; /* نمایش هدر به صورت ستونی */
+        height: auto; /* تنظیم ارتفاع خودکار */
+        padding: 10px; /* تنظیم فاصله داخلی */
+    }
+
+    /* تنظیم منو برای نمایش به صورت ستونی در دستگاه‌های کوچک */
+    .menu {
+        flex-direction: column; /* منو به صورت ستونی قرار می‌گیرد */
+        align-items: flex-start; /* قرار گرفتن آیتم‌ها از سمت چپ */
+    }
+
+    /* تنظیم استایل برای آیتم‌های منو در صفحات کوچک‌تر */
+    .menu li {
+        margin: 5px 0; /* فاصله بین آیتم‌ها */
+    }
+
+    /* تنظیم دکمه‌ها برای نمایش به صورت ستونی در صفحات کوچک‌تر */
+    .actions {
+        margin-top: 10px; /* فاصله از بالای دکمه‌ها */
+        justify-content: flex-start; /* تنظیم دکمه‌ها به سمت چپ */
+    }
+
+    /* تنظیم آیکون‌ها در صفحات کوچک‌تر */
+    .icons {
+        margin: 5px 0; /* فاصله بین آیکون‌ها */
+    }
 }

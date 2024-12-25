@@ -29,6 +29,14 @@ function remove_wp_block_library_css()
 }
 add_action('wp_enqueue_scripts', 'remove_wp_block_library_css', 100);
 
-
-
-
+function theme_supports() {
+  // فعال کردن پشتیبانی از لوگو
+  add_theme_support('custom-logo', array(
+      'height' => 100, // ارتفاع دلخواه
+      'width' => 100,  // عرض دلخواه
+      'flex-height' => true, // انعطاف در ارتفاع
+      'flex-width' => true,  // انعطاف در عرض
+      'header-text' => array('site-title', 'site-description'), // فعال‌سازی متن سرصفحه
+  ));
+}
+add_action('after_setup_theme', 'theme_supports');
