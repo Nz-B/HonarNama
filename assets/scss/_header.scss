@@ -16,6 +16,8 @@ header {
 .menu {
     display: flex; /* نمایش آیتم‌ها به صورت افقی */
     justify-content: flex-end; /* قرار گرفتن آیتم‌ها در سمت راست */
+    position: relative;
+    left: 50%;
     padding: 0;
     margin: 0;
     gap: 0; /* فاصله بین آیتم‌ها */
@@ -55,8 +57,8 @@ header {
 
 /* استایل برای لوگو */
 .custom-logo {
+    margin-right: 40px;
     width: 55px; /* عرض لوگو */
-    // margin-top: 5px; /* فاصله از بالا */
     display: inline-block; /* نمایش به صورت بلوک در خط */
 }
 

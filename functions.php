@@ -40,3 +40,4 @@ function theme_supports() {
   ));
 }
 add_action('after_setup_theme', 'theme_supports');
+

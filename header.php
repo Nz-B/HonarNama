@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo.png">
     <?php wp_head(); ?>
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/main.css">
 </head>
 
 <body <?php body_class(); ?>>
@@ -21,29 +23,24 @@
                     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/logo.png" alt="Default Logo">
                 <?php } ?>
             </div>
-            
-            <!-- منوی سایت -->
-            <div id="menu-items" class="grow pt-5 flex justify-between items-center">
-                <nav>
-                    <ul class="menu">
-                        <li><a href="/" class="menu-item">صفحه نخست</a></li>
-                        <li><a href="/services" class="menu-item">آثار</a></li>
-                        <li><a href="/exhibitions" class="menu-item">نمایشگاه‌ها</a></li>
-                        <li><a href="/archive" class="menu-item">آرشیو</a></li>
-                        <li><a href="/about" class="menu-item">درباره ما</a></li>
-                        <li><a href="/contact" class="menu-item">تماس با ما</a></li>
-                    </ul>
-                </nav>
-
-                <!-- دکمه‌ها و آیکون‌ها -->
-                <div class="actions flex items-center">
-                    <button><img class="icons" src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2024/12/search.png" alt="search"></button>
-                    <button><img class="icons" src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2024/12/Heart.png" alt="Heart"></button>
-                    <button><img class="icons" src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2024/12/buy.png" alt="buy"></button>
-                    <button><a href="#" class="login">ورود/ثبت نام</a></button>
-                </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="/" class="menu-item">صفحه نخست</a></li>
+                    <li><a href="/services" class="menu-item">آثار</a></li>
+                    <li><a href="/exhibitions" class="menu-item">نمایشگاه‌ها</a></li>
+                    <li><a href="/archive" class="menu-item">آرشیو</a></li>
+                    <li><a href="/about" class="menu-item">درباره ما</a></li>
+                    <li><a href="/contact" class="menu-item">تماس با ما</a></li>
+                </ul>
+            </nav>
+            <!-- دکمه‌ها و آیکون‌ها -->
+            <div class="actions flex items-center">
+                <button><img class="icons" src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2024/12/search.png" alt="search"></button>
+                <button><img class="icons" src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2024/12/Heart.png" alt="Heart"></button>
+                <button><img class="icons" src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2024/12/buy.png" alt="buy"></button>
+                <button><a href="<?php echo site_url('/http://localhost/WordpressWorkshop/wordpress/loing-singup/'); ?>"class="login">ورود/ثبت نام</a></button>
             </div>
         </div>
     </header>
-
-    <main class="flex-auto">
+<script src="assets/js/header.js"></script>
+<main class="flex-auto">
