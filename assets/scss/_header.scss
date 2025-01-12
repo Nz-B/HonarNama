@@ -6,11 +6,16 @@ body {
 
 header {
     position: fixed; /* هدر ثابت می‌ماند */
+    top: 0; /* بالای صفحه */
+    left: 0;
+    right: 0;
     background-color: rgb(240 232 232 / 70%); /* رنگ پس‌زمینه با شفافیت */
     backdrop-filter: blur(5px); /* افکت محو برای پس‌زمینه */
     z-index: 10; /* اولویت لایه برای هدر */
-    width: 100%; /* عرض 100 درصد */
+    width: 100%;
+    padding: 10px 0; /* تنظیم padding */
 }
+
 
 /* استایل برای منوی ناوبری */
 .menu {

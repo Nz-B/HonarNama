@@ -41,3 +41,38 @@ function theme_supports() {
 }
 add_action('after_setup_theme', 'theme_supports');
 
+function add_theme_scripts() {
+  // اضافه کردن فایل جاوااسکریپت اسلایدر
+  wp_enqueue_script('slider-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '1.0', true);
+
+  // اضافه کردن استایل‌های قالب
+  wp_enqueue_style('theme-style', get_template_directory_uri() . '/assets/css/styles.css', array(), '1.0'); // تبدیل به CSS
+}
+add_action('wp_enqueue_scripts', 'add_theme_scripts');
+
+function get_post_slider() {
+  // گرفتن پست‌های وردپرس
+  $args = array(
+      'post_type' => 'post', // نوع پست (اینجا "post" یعنی نوشته‌های وردپرس)
+      'posts_per_page' => 5, // تعداد پست‌هایی که در اسلایدر نمایش داده می‌شه
+  );
+
+  $query = new WP_Query($args); // کوئری گرفتن پست‌ها
+
+  // نمایش پست‌ها در اسلایدر
+  if ($query->have_posts()) {
+      echo '<div class="slider">';
+      while ($query->have_posts()) {
+          $query->the_post();
+          echo '<div class="slide">';
+          if (has_post_thumbnail()) { // بررسی وجود تصویر شاخص
+              the_post_thumbnail('large'); // نمایش تصویر شاخص
+          }
+          echo '<h2>' . get_the_title() . '</h2>'; // نمایش عنوان پست
+          echo '</div>';
+      }
+      echo '</div>';
+  }
+
+  wp_reset_postdata(); // بازنشانی اطلاعات کوئری
+}

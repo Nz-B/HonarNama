@@ -1,4 +1,3 @@
-
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -7,5 +6,156 @@
 @import "header";
 @import "footer";
 
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 723px; /* ارتفاع ثابت برای اسلایدر */
+    overflow: hidden;
+}
 
+.slider {
+    display: flex;
+    width: 100%; /* به اندازه سه اسلاید */
+    animation: slide 60s infinite; /* مدت زمان کلی انیمیشن */
+}
+
+.slide {
+    width: 100%; /* هر اسلاید به اندازه 100% از عرض اسلایدر */
+    flex-shrink: 0;
+    background-size: cover; /* این ویژگی تصویر را بدون زوم و کشیدگی در ابعاد اسلایدر تنظیم می‌کند */
+    background-position: center; /* تصویر در مرکز اسلایدر قرار می‌گیرد */
+}
+.slide img {
+    width: 100%;
+}
+
+/* تعریف انیمیشن با توقف 15 ثانیه‌ای در هر اسلاید */
+@keyframes slide {
+    0% { transform: translateX(0); }         /* اسلاید اول */
+    25% { transform: translateX(0); }       /* توقف اسلاید اول */
+    33.33% { transform: translateX(-100%); } /* انتقال به اسلاید دوم */
+    58.33% { transform: translateX(-100%); } /* توقف اسلاید دوم */
+    66.66% { transform: translateX(-200%); } /* انتقال به اسلاید سوم */
+    91.66% { transform: translateX(-200%); } /* توقف اسلاید سوم */
+    100% { transform: translateX(0); }      /* بازگشت به اسلاید اول */
+}
+
+/* کانتینر کلی اسلایدر */
+.exhibition-slider-container {
+  font-family: B Yekan;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* عنوان نمایشگاه */
+.exhibition-title {
+  padding: 40px;
+  text-align: right;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 25px;
+  color: #333;
+}
+
+/* کانتینر اسلایدر */
+.exhibition-slider {
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgb(118, 47, 121, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 160px; /* ارتفاع اسلایدر (قابل تغییر) */
+}
+
+/* اسلایدها */
+.exhibition-slide {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  transition: transform 0.5s ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
+
+/* تصویر پست‌ها */
+.exhibition-slide img {
+  width: 20%; /* عرض تصویر (قابل تغییر) */
+  height: 120%; /* ارتفاع خودکار با حفظ تناسب */
+  border-radius: 8px; /* گوشه‌های گرد */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  left: 30%;
+}
+
+/* متن عنوان پست */
+.exhibition-slide h1 {
+  position: absolute;
+  top: 20%;
+  right: 36%;
+  color: #FFFFFF;
+  padding: 10px;
+  font-size: 26px;
+  font-weight: bolder;
+}
+.exhibition-slide h3 {
+  position: absolute;
+  top: 8%;
+  right: 36%;
+  color: rgb(255, 255, 255, 0.8);
+  font-size: 16px;
+}
+
+.exhibition-slide .date {
+  position: absolute;
+  top: 68%;
+  right: 36%;
+  color: rgb(255, 255, 255, 0.8);
+  font-size: 16px;
+}
+
+.exhibition-slide .publisher {
+  position: absolute;
+  top: 68%;
+  right: 50%;
+  color: rgb(255, 255, 255, 0.8);
+  font-size: 16px;
+}
+
+.exhibition-slide .more_info {
+  padding: 8px;
+  width: 120px;
+  height: 40px;
+  position: relative;
+  right: 26%;
+  border-radius: 14px;
+  background-color: #6C566B;
+  color: rgb(255, 255, 255, 0.8);
+  font-size: 16px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
 

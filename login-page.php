@@ -1,4 +1,3 @@
-
 <?php
 /* Template Name: Login Page */
 ?>
@@ -16,7 +15,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css stylesheet -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/scss/loing & Singup-style.css?v=1.1" type="text/css">
-
 </head>
 
 <body>
@@ -51,7 +49,7 @@
                 <h1>وارد شوید </h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="<?php echo $authUrl; ?>" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <a href="#" class="social"><i class="fab fa-github"></i></a>
                 </div>
                 <span>!وارد اکانت خود شوید و از خدمات ما استفاده کنید </span>
@@ -83,6 +81,7 @@
             <button id="overlayBtn"></button>
         </div>
     </div>
+
     <!-- js code -->
     <script>
         const container = document.getElementById('container')
@@ -99,8 +98,6 @@
 
 
         });
-
-
     </script>
 
 </body>

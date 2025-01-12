@@ -38,7 +38,8 @@
                 <button><img class="icons" src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2024/12/search.png" alt="search"></button>
                 <button><img class="icons" src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2024/12/Heart.png" alt="Heart"></button>
                 <button><img class="icons" src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2024/12/buy.png" alt="buy"></button>
-                <button><a href="<?php echo site_url('/http://localhost/WordpressWorkshop/wordpress/loing-singup/'); ?>"class="login">ورود/ثبت نام</a></button>
+                <button><a href="<?php echo site_url('/loing-singup/'); ?>" class="login">ورود/ثبت نام</a>
+                </button>
             </div>
         </div>
     </header>
