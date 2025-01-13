@@ -20,3 +20,4 @@ document.querySelector('.right-btn').addEventListener('click', () => {
     currentSlide = (currentSlide + 1) % slides.length;
     document.querySelector('.exhibition-slider').style.transform = `translateX(-${currentSlide * 100}%)`;
 });
+
