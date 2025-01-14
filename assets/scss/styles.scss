@@ -135,6 +135,12 @@
   background-color: #6C566B;
   color: rgb(255, 255, 255, 0.8);
   font-size: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.exhibition-slide .more_info:hover {
+  transform: scale(1.09);
+  color: #6C566B;
+  background-color: rgb(255, 255, 255, 0.8);
 }
 
 .slider-btn {
@@ -518,4 +524,116 @@
   font-size: 18px;
   text-align: right;
 }
-
+  
+/* کانتینر کلی اسلایدر */
+.articles-slider-container {
+  font-family: 'B Yekan', sans-serif;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+/* عنوان نمایشگاه */
+.articles-title {
+  padding: 20px;
+  text-align: right;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}
+/* کانتینر اسلایدر */
+.articles-slider {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: space-between;
+}
+/* اسلایدها */
+.articles-slide-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.articles-slide-right:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.articles-slide-right img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.articles-slide-right h1 {
+  margin: 15px;
+  font-size: 1.5rem;
+  color: #000;
+  text-align: right;
+}
+.articles-slide-right h3 {
+  margin: 15px;
+  font-size: 1rem;
+  color: #555;
+  text-align: right;
+  line-height: 1.6;
+}
+/* تنظیمات کلی کانتینر */
+.Container {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* کارت مقالات */
+.article-card {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.article-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.article-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: 15px;
+}
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-content h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 0 8px;
+  color: #333;
+}
+.text-content h3 {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+/* لینک‌ها */
+.article-card a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}

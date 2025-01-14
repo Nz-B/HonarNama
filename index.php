@@ -202,6 +202,54 @@
   </div>
 </div>
 
+<div class="articles-slider-container">
+  <h2 class="articles-title">اخبار و مقالات</h2>
+  <div class="articles-slider">
+    <div class="articles-slide-right">
+      <a href="#">
+        <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/mmkwbqaymh.webp" alt="عنوان پست">
+        <h1>کرم با طعم توت فرنگی</h1>
+        <h3>نمایشگاه انفرادی «کرم با طعم توت‌فرنگی» با نقاشی‌های الهه جعفری، روز یکشنبه نهم دی‌ماه به صورت آنلاین در نمایشگاه ‌هنرنما به نمایش درمی‌آید. </h3>
+      </a>
+    </div>
+
+    <div class="Container">
+      <div class="article-card">
+        <a href="#">
+          <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2024/12/logo.png" alt="چرا هنرنما؟">
+          <div class="text-content">
+            <h1>چرا هنرنما؟</h1>
+            <h3>هنرنما پلتفرمی با قابلیت خریدوفروش امن آثار گرانبهای شماست!</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="article-card">
+        <a href="#">
+          <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/download-1.jpg" alt="نمایشگاه‌های مجازی">
+          <div class="text-content">
+            <h1>نحوه شرکت در نمایشگاه‌های مجازی</h1>
+            <h3>برای شرکت در نمایشگاه‌ها ابتدا باید وارد حساب کاربری خود شوید و سپس...</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="article-card">
+        <a href="#">
+          <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/1727072696_56.png" alt="وبینار هوش مصنوعی">
+          <div class="text-content">
+            <h1>وبینار آنلاین:</h1>
+            <h1>خلق تصاویر با هوش مصنوعی</h1>
+            <h3>استفاده از هوش مصنوعی در این روزها به یک نیاز اساسی تبدیل شده است...</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js"></script>
   
   <?php get_footer(); ?>
