@@ -121,6 +121,52 @@
   </div>
 </div>
 
+<div class="Webinar-slider-container">
+  <h2 class="Webinar-title">وبینارها</h2>
+  <div class="Webinar-slider">
+    <div class="Webinar-slide">
+      <a href="#">
+        <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/1727072696_56.png" alt="عنوان پست">
+        <h1>وبینار خلق تصاویر با هوش مصنوعی</h1>
+      </a>
+      <h1 id="teacher-name">حسین خلیلی</h1>
+      <h2 class="date">1403/10/13 - ساعت 18 الی 20</h2>
+      <hr>
+      <div class="container">
+        <button>ثبت نام</button>
+        <h2 class="mony">قیمت</h2>
+      </div>
+    </div>
+    <div class="Webinar-slide">
+      <a href="#">
+        <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/1714659262_59.png" alt="عنوان پست">
+        <h1>وبینار از نمایشگر تا چاپ</h1>
+      </a>
+      <h1 id="teacher-name">فرزاد ولیزاده</h1>
+      <h2 class="date">1403/10/19 - ساعت 20 الی 22</h2>
+      <hr>
+      <div class="container">
+        <button>ثبت نام</button>
+        <h2 class="mony">رایگان</h2>
+      </div>
+    </div>
+    <div class="Webinar-slide">
+      <a href="#">
+        <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/1621248394_50.jpg" alt="عنوان پست">
+        <h1>وبینار مقدمات سایه‌زنی حروف (کالیگرافی)</h1>
+      </a>
+      <h1 id="teacher-name">بهنام اتابک</h1>
+      <h2 class="date">1403/10/23 - ساعت 15 الی 18</h2>
+      <hr>
+      <div class="container">
+        <button>ثبت نام</button>
+        <h2 class="mony">قیمت</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js"></script>
   
