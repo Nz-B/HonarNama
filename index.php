@@ -166,7 +166,41 @@
   </div>
 </div>
 
-
+<div class="artists-slider-container">
+  <h2 class="artists-title">هنرمندان برجسته آذر ماه</h2>
+  <div class="artists-slider">
+    <div class="artists-slide">
+      <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/آنالی-طاهریان.webp" alt="عنوان پست">
+      <h1 id="teacher-name">آنالی طاهریان</h1>
+      <h3>محمودآباد _ 1370</h3>
+    </div>
+    <div class="artists-slide">
+      <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/موسی-ربانی.webp" alt="عنوان پست">
+      <h1 id="teacher-name">موسی ربانی</h1>
+      <h3>اصفهان _ 1366</h3>
+    </div>
+    <div class="artists-slide">
+      <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/مریم-بیگی.webp" alt="عنوان پست">
+      <h1 id="teacher-name">مریم بیگی</h1>
+      <h3>تهران _ 1367</h3>
+    </div>
+    <div class="artists-slide">
+      <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/امیرحسین-نعیما.webp" alt="عنوان پست">
+      <h1 id="teacher-name">امیر حسین نعیما</h1>
+      <h3>مازندران _ 1375</h3>
+    </div>
+    <div class="artists-slide">
+      <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/یغما-سروشه.webp" alt="عنوان پست">
+      <h1 id="teacher-name">یغما سروشه</h1>
+      <h3>تهران _ 1372</h3>
+    </div>
+    <div class="artists-slide">
+      <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/مسعود-حاتمی.webp" alt="عنوان پست">
+      <h1 id="teacher-name">مسعود حاتمی</h1>
+      <h3>رشت _ 1362</h3>
+    </div>
+  </div>
+</div>
 
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js"></script>
   

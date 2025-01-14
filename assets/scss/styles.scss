@@ -440,3 +440,82 @@
   color: #ffffff;
 }
 
+/* کانتینر کلی اسلایدر */
+.artists-slider-container {
+  font-family: B Yekan;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* عنوان نمایشگاه */
+.artists-title {
+  padding: 40px;
+  text-align: right;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #333;
+}
+
+/* کانتینر اسلایدر */
+.artists-slider {
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+/* اسلایدها */
+.artists-slide {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.1);
+  width: calc(16% - 10px); /* سه اسلاید در هر ردیف */
+  height: 400px;
+  box-sizing: border-box;
+  border: 1.8px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  padding: 5px; /* فاصله داخلی برای اسلاید */
+}
+
+.artists-slide:hover {
+  transform: scale(1.02); /* بزرگ‌تر شدن اسلاید */
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3); /* افزایش سایه */
+}
+
+/* تصویر پست‌ها */
+.artists-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  box-sizing: border-box; /*تصویر دقیقا داخل مرز بردر قرار بگیرد */
+}
+
+.artists-slide #teacher-name{
+  margin-top: 150%; /* فاصله برای قرار گرفتن زیر تصویر */
+  position: relative;
+  margin-bottom: 10px; /* فاصله بیشتر بین عنوان و سایر متن‌ها */
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.artists-slide h3 {
+  margin-top: 10%;
+  position: relative;
+  right: 10px;
+  color: rgb(0, 0, 0 , 0.8);
+  font-size: 18px;
+  text-align: right;
+}
+
