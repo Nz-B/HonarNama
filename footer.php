@@ -9,8 +9,8 @@
             هنرنما بازار آنلاین فروش آثار هنری است که کار خود را از سال ۱۴۰۲ آغاز کرده تا بستری مستقل را جهت بازاریابی و فروش آثار نقاشی هنرمندان نسل نو فراهم کند. ما در هنرنما با ایجاد ارتباطی روشن بین مخاطب، هنرمند و ارائه سرویس‌های متفاوت، تجربیات تازه‌ای را برای خریداران و علاقه‌مندان آثار هنری رقم می‌زنیم تا سهم هنر در زندگی ما بیشتر باشد.
         </h3>
         <div class="social-container">
-            <a href="nazaninbakhshi386.com"><i class="fas fa-envelope"></i></a>
-            <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i></a>
+            <a href="mailto:nazaninbakhshi386.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:tel:+989370095930"><i class="fas fa-phone-alt"></i></a>
             <a href="https://t.me/Bakhshi_BA" target="_blank"><i class="fab fa-telegram-plane"></i></a>
             <a href="https://www.linkedin.com/in/nazanin-bakhshi" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
