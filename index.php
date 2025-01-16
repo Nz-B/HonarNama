@@ -54,6 +54,9 @@
       <h2 class="width">80⨯100 سانتی متر</h2>
       <hr>
       <h2 class="mony">قیمت</h2>
+      <div class="overlay">
+        <span class="overlay-text">اطلاعات بیشتر</span>
+      </div>
     </div>
     <div class="product-slide">
       <a href="http://localhost/WordpressWorkshop/wordpress/2024/12/24/picture1/">
@@ -64,6 +67,9 @@
       <h2 class="width">35⨯24 سانتی متر</h2>
       <hr>
       <h2 class="mony">قیمت</h2>
+      <div class="overlay">
+        <span class="overlay-text">اطلاعات بیشتر</span>
+      </div>
     </div>
     <div class="product-slide">
       <a href="http://localhost/WordpressWorkshop/wordpress/2024/12/24/محبوب-ترین-اثر3/">
@@ -74,6 +80,9 @@
       <h2 class="width">51⨯60 سانتی متر</h2>
       <hr>
       <h2 class="mony">قیمت</h2>
+      <div class="overlay">
+        <span class="overlay-text">اطلاعات بیشتر</span>
+      </div>
     </div>
     <div class="product-slide">
       <a href="http://localhost/WordpressWorkshop/wordpress/2024/12/24/محبوب-ترین-اثر-4/">
@@ -84,6 +93,9 @@
       <h2 class="width">40⨯29 سانتی متر</h2>
       <hr>
       <h2 class="mony">قیمت</h2>
+      <div class="overlay">
+        <span class="overlay-text">اطلاعات بیشتر</span>
+      </div>
     </div>
   </div>
 </div>
