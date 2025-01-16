@@ -76,3 +76,13 @@ function get_post_slider() {
 
   wp_reset_postdata(); // بازنشانی اطلاعات کوئری
 }
+
+function enqueue_theme_styles() {
+  // استایل اصلی
+  wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/styles.css');
+
+  // استایل فوتر
+  wp_enqueue_style('footer-style', get_template_directory_uri() . '/assets/css/footer.css', array(), '1.0', 'all');
+}
+add_action('wp_enqueue_scripts', 'enqueue_theme_styles');
+
