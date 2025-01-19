@@ -155,6 +155,6 @@ add_action('the_content', 'display_price_in_irr');
 
 
 function enqueue_custom_styles() {
-  wp_enqueue_style('product_info', get_template_directory_uri() . '/assets/scss/product_info.css', array(), '1.1', 'all');
+  wp_enqueue_style('product_info', get_template_directory_uri() . '/assets/scss/product_info.scss', array(), '1.1', 'all');
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
