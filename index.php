@@ -10,7 +10,7 @@
     <title>صفحه نخست</title>
 </head>
 <body>
-  <?php get_header(); ?>
+<?php get_header(); ?>
   
   <div class="slider-container">
     <div class="slider">
@@ -46,17 +46,29 @@
   <h2 class="product-title">محبوب ترین آثار</h2>
   <div class="product-slider">
     <div class="product-slide">
-      <a href="http://localhost/WordpressWorkshop/wordpress/2024/12/23/hello-world/">
+      <a href="http://localhost/WordpressWorkshop/wordpress/product-info/">
         <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2024/12/artwork_035c60f6-1366-447c-9556-42dd9a9ac96d.webp" alt="عنوان پست">
         <h1 id="painter-name">مهدی راحمی</h1>
-      </a>
       <h1>اکریلیک</h1>
       <h2 class="width">80⨯100 سانتی متر</h2>
       <hr>
-      <h2 class="mony">قیمت</h2>
+      
+      <h2 class="mony">
+        <?php
+          // $price_usd = 100; // قیمت دلاری
+          // $price_irr = convert_price_to_irr($price_usd);
+
+          // if ($price_irr) {
+          //     echo "قیمت: " . number_format($price_irr) . " ریال";
+          // } else {
+          //     echo "قیمت قابل محاسبه نیست!";
+          // }
+        ?>
+      </h2>
       <div class="overlay">
         <span class="overlay-text">اطلاعات بیشتر</span>
       </div>
+    </a>
     </div>
     <div class="product-slide">
       <a href="http://localhost/WordpressWorkshop/wordpress/2024/12/24/picture1/">
@@ -66,7 +78,16 @@
       <h1>کلاژ روی مقوا</h1>
       <h2 class="width">35⨯24 سانتی متر</h2>
       <hr>
-      <h2 class="mony">قیمت</h2>
+      <h2 class="mony">
+        <?php
+          // دریافت قیمت تبدیل شده به ریال
+          $converted_price = get_post_meta(get_the_ID(), 'converted_price_irr', true); // 'converted_price_irr' نام فیلد جدید است
+
+          if ($converted_price) {
+              echo '<p>قیمت به ریال: ' . number_format($converted_price) . ' ریال</p>'; // نمایش قیمت به ریال با فرمت هزارگان
+          }
+        ?>
+      </h2>
       <div class="overlay">
         <span class="overlay-text">اطلاعات بیشتر</span>
       </div>
@@ -79,7 +100,10 @@
       <h1>پاستل روغنی روی مقوا</h1>
       <h2 class="width">51⨯60 سانتی متر</h2>
       <hr>
-      <h2 class="mony">قیمت</h2>
+      <h2 class="mony"><?php 
+        $post_id = get_the_ID(); // گرفتن ID پست در حال نمایش
+        display_price_in_irr($post_id); // نمایش قیمت ریالی ?>
+      </h2>
       <div class="overlay">
         <span class="overlay-text">اطلاعات بیشتر</span>
       </div>
@@ -87,10 +111,10 @@
     <div class="product-slide">
       <a href="http://localhost/WordpressWorkshop/wordpress/2024/12/24/محبوب-ترین-اثر-4/">
         <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2024/12/1729428713981-1.png" alt="عنوان پست">
-        <h1 id="painter-name">پریسا شجاع‌زاده</h1>
+        <h1 id="painter-name">محمدعلی فرجی‌جاه</h1>
       </a>
-      <h1>پاستل روغنی روی مقوا</h1>
-      <h2 class="width">40⨯29 سانتی متر</h2>
+      <h1>رنگ روغن</h1>
+      <h2 class="width">51⨯60 سانتی متر</h2>
       <hr>
       <h2 class="mony">قیمت</h2>
       <div class="overlay">
@@ -224,7 +248,7 @@
       <a href="#">
         <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/mmkwbqaymh.webp" alt="عنوان پست">
         <h1>کرم با طعم توت فرنگی</h1>
-        <h3>نمایشگاه انفرادی «کرم با طعم توت‌فرنگی» با نقاشی‌های الهه جعفری، روز یکشنبه نهم دی‌ماه به صورت آنلاین در نمایشگاه ‌هنرنما به نمایش درمی‌آید. </h3>
+        <h3>نمایشگاه انفرادی «کرم با طعم توت‌فرنگی» با نقاشی‌های الهه جعفری، روز یکشنبه نهم دی‌ماه به صورت آنلاین در سایت ‌هنرنما به نمایش درمی‌آید. </h3>
       </a>
     </div>
 
@@ -263,10 +287,9 @@
   </div>
 </div>
 
-
+<?php get_footer(); ?>
 
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js"></script>
-  
-  <?php get_footer(); ?>
+
 </body>
 </html>

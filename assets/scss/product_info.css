@@ -1,0 +1,291 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "font";
+@import "header";
+@import "footer";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.product-section {
+  font-family: B Yekan ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-section img {
+  flex: 1; /* نصف صفحه */
+  max-width: 60%; /* اطمینان از متناسب بودن تصویر */
+  height: 520px;
+  border-radius: 20px;
+  position: relative;
+  top: 20px;
+  left: 6%;
+}
+
+.product-info {
+  flex: 1; /* نصف صفحه */
+  padding: 20px;
+  text-align: center; /* برای نمایش متن به صورت راست‌چین */
+}
+
+.product-info h1 {
+  font-size: 3.8rem;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.product-info .top-mony {
+  margin: 10px 0;
+  background-color: #7D5260;
+  height: 4px;
+}
+
+.product-info .num-mony {
+  font-size: 2rem;
+  color: #555;
+}
+
+.product-info .txt-mony {
+    font-size: 1.5rem;
+    color: #555;
+    position: relative;
+    bottom: 15px;
+    right: 20%;
+}
+
+.product-info button {
+  padding: 12px 20px;
+  width: 300px;
+  align-items: center;
+  background-color: #5b1b4d;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 5px 8px 9px rgba(0, 0, 0, 0.15);
+}
+
+.product-info button:hover {
+  background-color: #762F79;
+}
+
+.product-info .under-mony {
+    margin: 10px 0;
+    opacity: 34%;
+    background-color: rgba(125, 82, 96);
+    height: 3px;
+  }
+
+.max-w-2xl ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.max-w-2xl li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+span {
+  font-size: 1.2rem;
+}
+
+.font-semibold {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* .container_border{
+  background-color: rgb(100, 100, 100, 0.5);
+  height: 3px;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.container img {
+    max-width: 100%;
+    height: auto;
+}
+.container_section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.container_section_hr {
+    margin: 10px 0;
+    width: 100%;
+    max-width: 50px;
+}
+.container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+.container h3 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 10px 0 0;
+    color: #555;
+} */
+
+/* کانتینر کلی اسلایدر */
+.product-slider-container {
+  font-family: B Yekan;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  bottom: 30px;
+}
+
+/* عنوان نمایشگاه */
+.product-title {
+  padding: 20px;
+  text-align: right;
+  font-size: 35px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* کانتینر اسلایدر */
+.product-slider {
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* اسلایدها */
+.product-slide {
+  display: flex;
+  flex-direction: column;
+  width: calc(25% - 20px); /* چهار اسلاید در هر ردیف */
+  height: 450px;
+  box-sizing: border-box;
+  border: 2.5px solid #762f79;
+  border-radius: 10px;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  padding: 10px; /* فاصله داخلی برای اسلاید */
+}
+
+/* لایه شناور خاکستری با متن "اطلاعات بیشتر" */
+.product-slide .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+/* افکت محو شدن تصویر */
+.product-slide:hover img {
+  opacity: 0.3;
+}
+
+/* دکمه اطلاعات بیشتر */
+.product-slide .overlay-text {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  background-color: #762f79;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* افکت هاور روی متن */
+.product-slide .overlay-text:hover {
+  background-color: #5b1b4d; /* رنگ تیره‌تر در هاور */
+}
+
+/* اثر هاور روی اسلاید */
+.product-slide:hover .overlay {
+  opacity: 1; /* نمایان شدن لایه خاکستری */
+  transform: scale(1.01); /* بزرگ شدن اسلاید با انیمیشن */
+}
+
+.product-slide:hover {
+  transform: scale(1.05); /* بزرگ شدن اسلاید */
+}
+
+/* تصویر پست‌ها */
+.product-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+  border-radius: 11px 11px 0 0;
+  box-sizing: border-box; /*تصویر دقیقا داخل مرز بردر قرار بگیرد */
+}
+
+/* متن عنوان پست */
+.product-slide #painter-name {
+  margin-top: 105%; /* فاصله برای قرار گرفتن زیر تصویر */
+}
+.product-slide h1 {
+  position: relative;
+  margin-bottom: 10px; /* فاصله بیشتر بین عنوان و سایر متن‌ها */
+  color: #000000;
+  font-size: 18px;
+  text-align: right;
+}
+
+.product-slide .width {
+  position: relative;
+  margin-bottom: 10px; /* فاصله بین اندازه و قیمت */
+  color: #000000;
+  font-size: 16px;
+  text-align: left;
+}
+
+.product-slide hr {
+  margin: 5px;
+  background-color: #762f79;
+  height: 2px;
+}
+
+.product-slide .mony {
+  position: relative;
+  margin-top: 10px; /* فاصله بیشتر برای قیمت */
+  color: #000000;
+  font-size: 20px;
+  text-align: center;
+}

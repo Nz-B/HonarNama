@@ -86,3 +86,75 @@ function enqueue_theme_styles() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_theme_styles');
 
+function add_custom_price_field() {
+  add_meta_box(
+      'custom_price_field', // ID
+      'Price in USD', // عنوان
+      'display_custom_price_field', // تابع برای نمایش فیلد
+      'post', // نوع پست (می‌توانید به جای "post" از "page" یا هر نوع پست دیگری استفاده کنید)
+      'normal', // مکان فیلد ('normal' برای نمایش در محتوای اصلی، 'side' برای کنار و 'advanced' برای بالای صفحه)
+      'default' // اولویت
+  );
+}
+add_action('add_meta_boxes', 'add_custom_price_field');
+
+function display_custom_price_field($post) {
+  $price = get_post_meta($post->ID, '_custom_price', true); // اگر فیلد قبلاً مقداردهی شده است
+  ?>
+  <label for="custom_price">Enter Price in USD:</label>
+  <input type="text" name="custom_price" id="custom_price" value="<?php echo esc_attr($price); ?>" />
+  <?php
+}
+
+function save_custom_price_field($post_id) {
+  if (array_key_exists('custom_price', $_POST)) {
+      update_post_meta(
+          $post_id,
+          '_custom_price',
+          $_POST['custom_price']
+      );
+  }
+}
+add_action('save_post', 'save_custom_price_field');
+
+function get_usd_to_iran_rate() {
+  $api_url = 'https://v6.exchangerate-api.com/v6/d986a324517a7c2e7035dee3/latest/USD'; // آدرس API شما
+  $response = wp_remote_get($api_url);
+
+  if (is_wp_error($response)) {
+      return 'Error fetching data';
+  }
+
+  $data = wp_remote_retrieve_body($response);
+  $exchange_data = json_decode($data, true);
+  
+  // دیباگ کردن داده‌ها برای اطمینان از دریافت صحیح اطلاعات
+  error_log(print_r($exchange_data, true));
+
+  if ($exchange_data['result'] === 'success') {
+      return $exchange_data['conversion_rates']['IRR']; // IRR کد ریال است
+  } else {
+      return 'API error';
+  }
+}
+
+
+function display_price_in_irr($post_id) {
+  $price_usd = get_post_meta($post_id, '_custom_price', true);
+  if ($price_usd) {
+      $rate = get_usd_to_iran_rate();
+      if (is_numeric($rate)) {
+          $price_irr = $price_usd * $rate;
+          echo '<p>Price in IRR: ' . number_format($price_irr) . ' ریال</p>';
+      } else {
+          echo '<p>Error fetching exchange rate</p>';
+      }
+  }
+}
+add_action('the_content', 'display_price_in_irr');
+
+
+function enqueue_custom_styles() {
+  wp_enqueue_style('product_info', get_template_directory_uri() . '/assets/scss/product_info.css', array(), '1.1', 'all');
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
