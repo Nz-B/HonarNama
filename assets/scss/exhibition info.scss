@@ -1,0 +1,153 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "font";
+@import "header";
+@import "footer";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    direction: rtl;
+    padding: 0px;
+    color: #333;
+}
+
+.container {
+    font-family: B Yekan ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.container_left {
+    flex: 1;
+    max-width: 40%;
+}
+
+.container_left img {
+    width: 70%;
+    height: 320px;
+    border-radius: 12px;
+    position: relative;
+    right: 30px;
+}
+
+section {
+    width: 500px;
+    height: auto;
+    margin: 20px auto;
+    padding: 24px;
+    background-color: rgb(208, 188, 255, 0.5);
+    border-radius: 12px;
+    border: 1px solid rgb(79, 55, 139, 0.2);
+    box-shadow: 8px 8px 9px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    position: relative;
+    left: 60px;
+}
+
+.space-y-4 {
+    list-style: none;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+span:first-child {
+    font-weight: 600;
+    font-size: 22px;
+    color: #4a4a4a;
+}
+
+span:last-child {
+    font-size: 19px;
+    color: #6b7280;
+    position: relative;
+    left: 10px;
+}
+
+.li_hr {
+    margin-top: 1px;
+    background-color: rgb(0, 0, 0);
+    opacity: 40%;
+    height: 3px;
+}
+
+.section_btn {
+    display: block;
+    width: 60%; 
+    padding: 15px 25px;
+    margin: 20px auto; 
+    background: linear-gradient(45deg, #762F79, #5d215f, #3c1551); /* گرادیانت سه‌رنگ */
+    color: white;
+    border-radius: 50px;
+    font-size: 18px; 
+    font-weight: 600; 
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    border: none; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
+}
+
+/* تغییر رنگ گرادیانت و حرکت دکمه هنگام hover */
+.section_btn:hover {
+    background: linear-gradient(45deg, #5d215f, #3c1551, #762F79); /* تغییر گرادیانت */
+    transform: translateY(-4px); /* حرکت دکمه به بالا */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* سایه بزرگ‌تر */
+}
+
+/* انیمیشن کلیک روی دکمه */
+.section_btn:active {
+    transform: translateY(2px); /* حرکت دکمه به پایین هنگام کلیک */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* بازگشت سایه به حالت عادی */
+}
+
+/* حالت فوکوس */
+.section_btn:focus {
+    outline: none; /* حذف خط فوکوس */
+    box-shadow: 0 0 0 3px rgba(118, 47, 121, 0.5); /* سایه دور دکمه */
+}
+
+.container_right {
+    flex: 1;
+    max-width: 55%;
+}
+
+.container_right h1 {
+    font-size: 28px;
+    font-weight: bolder;
+    color: #000000; 
+    margin-bottom: 20px;
+}
+
+.container_right p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+    position: relative;
+    right: 20px;
+}
+
+.container_right div {
+    background-color: #fff;
+    padding: 30px;
+    width: 80%;
+}
+
