@@ -5,15 +5,11 @@ body {
 }
 
 header {
-    position: fixed; /* هدر ثابت می‌ماند */
-    top: 0; /* بالای صفحه */
-    left: 0;
-    right: 0;
-    background-color: rgb(240 232 232 / 70%); /* رنگ پس‌زمینه با شفافیت */
-    backdrop-filter: blur(5px); /* افکت محو برای پس‌زمینه */
-    z-index: 10; /* اولویت لایه برای هدر */
-    width: 100%;
-    padding: 10px 0; /* تنظیم padding */
+    position: sticky;
+    top: 0; /* زمانی که به این نقطه رسید، ثابت می‌شود */
+    z-index: 10; /* برای نمایش روی سایر عناصر */
+    background-color: rgba(240, 232, 232, 0.7); /* شفافیت دلخواه */
+    backdrop-filter: blur(5px); /* محو کردن پس‌زمینه */
 }
 
 
