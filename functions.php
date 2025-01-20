@@ -153,8 +153,13 @@ function display_price_in_irr($post_id) {
 }
 add_action('the_content', 'display_price_in_irr');
 
-
-function enqueue_custom_styles() {
+function enqueue_product_info_styles() {
   wp_enqueue_style('product_info', get_template_directory_uri() . '/assets/scss/product_info.scss', array(), '1.1', 'all');
 }
-add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
+add_action('wp_enqueue_scripts', 'enqueue_product_info_styles');
+
+function enqueue_exhibition_info_styles() {
+  wp_enqueue_style('exhibition_info', get_template_directory_uri() . '/assets/scss/exhibition_info.scss', array(), '1.1', 'all');
+}
+add_action('wp_enqueue_scripts', 'enqueue_exhibition_info_styles');
+

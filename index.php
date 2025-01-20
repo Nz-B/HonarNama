@@ -35,7 +35,7 @@
       <h1><a href="http://localhost/WordpressWorkshop/wordpress/2025/01/12/نمایشگاه-کرم-با-طعم-توت-فرنگی/">کرم با طعم توت فرنگی</a></h1>
       <h2 class="date">09 الی 12 دی ماه</h2>
       <h2 class="publisher">برگزارکننده: هنرنما</h2>
-      <button class="more_info">اطلاعات بیشتر</button>
+      <button class="more_info"><a href="http://localhost/WordpressWorkshop/wordpress/exhibition-info/">اطلاعات بیشتر</a></button>
       <button class="slider-btn left-btn">◀</button>
       <button class="slider-btn right-btn">▶</button>
     </div>
@@ -245,7 +245,7 @@
   <h2 class="articles-title">اخبار و مقالات</h2>
   <div class="articles-slider">
     <div class="articles-slide-right">
-      <a href="#">
+      <a href="http://localhost/WordpressWorkshop/wordpress/exhibition-info/">
         <img src="http://localhost/WordpressWorkshop/wordpress/wp-content/uploads/2025/01/mmkwbqaymh.webp" alt="عنوان پست">
         <h1>کرم با طعم توت فرنگی</h1>
         <h3>نمایشگاه انفرادی «کرم با طعم توت‌فرنگی» با نقاشی‌های الهه جعفری، روز یکشنبه نهم دی‌ماه به صورت آنلاین در سایت ‌هنرنما به نمایش درمی‌آید. </h3>
