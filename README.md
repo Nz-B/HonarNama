@@ -79,4 +79,5 @@ For more information about this project or to share your feedback and suggestion
   <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn Logo" width="20" style="vertical-align: middle; margin-right: 10px;">
   www.linkedin.com/in/nazanin-bakhshi
 </a>
+<br>
 We’d love to hear from you and help in any way we can! 💬
