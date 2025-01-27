@@ -62,3 +62,21 @@ To bypass WordPress function errors in VScode when you load the theme directory 
 
 By following these steps, you should now be able to get suggestions, and WordPress functions will be recognized as defined. 🎉
 
+---
+
+## 📬 **Contact Us**  
+
+For more information about this project or to share your feedback and suggestions, feel free to reach out through the following channels:  
+
+<a href="mailto:your-email@example.com" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Logo" width="20" style="vertical-align: middle; margin-right: 10px;">
+     nazaninbakhshi386@gmail.com
+</a>  
+
+<br>
+
+<a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn Logo" width="20" style="vertical-align: middle; margin-right: 10px;">
+  www.linkedin.com/in/nazanin-bakhshi
+</a>
+We’d love to hear from you and help in any way we can! 💬
